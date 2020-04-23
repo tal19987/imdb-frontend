@@ -1,13 +1,5 @@
 img[src=""] {
-    width: 100px;
-    height: 100px;
     border: none !important; 
-    outline: none;
-    display: none;
-}
-img[src*="http"] {
-    width: 100px;
-    height: 100px;
 }
 
 .text {
@@ -19,7 +11,7 @@ img[src*="http"] {
     color: #f35626 !important;
     animation: hue 5s infinite linear !important;
     font: 100%/1.5 "Roboto", Verdana, sans-serif !important;
-    font-size: 7rem !important;
+    font-size: 6.5rem !important;
 }
 @keyframes hue {
     from {
@@ -33,6 +25,19 @@ img[src*="http"] {
 
 .text-sub {
     color: #7b8993;
-    font-size: 1.5rem !important;
+    font-size: 1.3rem !important;
     font: 100%/1.5 "Roboto", Verdana, sans-serif;
+}
+
+h1 {
+    height: 8.5rem;
+}
+
+hr {
+    border: none !important;
+    width: 50% !important;
+    height: 1px !important;
+    background-color: #c0c8c9;
+    background-image: linear-gradient(to right, #ffffff 0%,#c0c8c9 50%,#ffffff 100%);
+    margin-bottom: 1.5rem
 }

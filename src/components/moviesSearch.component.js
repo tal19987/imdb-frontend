@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import '../css/input.css'
+import '../css/designs.css'
 import Movie from '../functions/movies_list.function' 
-import 'animate.css';
+import GithubLink from '../functions/gitHubLink.function';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-class Input extends Component {
+class Movies extends Component {
     constructor(props) {
         super(props);
         this.state = { 
@@ -47,16 +47,22 @@ class Input extends Component {
     }
     render() {
         return(
-            <form className="form-inline d-flex justify-content-center animation fadeIn" style={{marginTop: "4%", animationDuration: "2s"}} onSubmit={this.handleSubmit}>
-                <div>
-                    <input type="movies" className="form-control mx-sm-3 mb-2" placeholder="Sepearate using ','" value={this.state.searchString} onChange={this.handleChange}/>
-                    <button type="submit" className="btn btn-primary mb-2">Click Me!</button>
+            <div>
+                <form className="form-inline d-flex justify-content-center" style={{marginTop: "4%"}} onSubmit={this.handleSubmit}>
+                    <div style={{marginBottom: "10px"}}>
+                        <input type="movies" className="form-control mx-sm-3 mb-2" placeholder="Sepearate using ','" value={this.state.searchString} onChange={this.handleChange}/>
+                        <button type="submit" className="btn btn-primary mb-2">Click Me!</button>
+                    </div>
+                </form>
+                <div className="row text-center text-lg-left">
+                    {
+                        this.state.showText && this.movies_func()
+                    }
                 </div>
-                {
-                    this.state.showText && this.movies_func()
-                }
-            </form>
+                <hr />
+                <GithubLink />
+            </div>
         )
     }
 }
-export default Input;
+export default Movies;

@@ -1,13 +1,13 @@
 import React from 'react';
-import Input from './components/input.component';
+import Movies from './components/moviesSearch.component';
 import Headline from './components/headline.component';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{overflowX: "hidden"}}>
       <Headline />
-      <Input />
+      <Movies />
     </div>
   );
 }
