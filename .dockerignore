@@ -1,0 +1,5 @@
+Jenkinsfile
+frontend-deployment.yml
+.gitignore
+node_modules
+Dockerfile
